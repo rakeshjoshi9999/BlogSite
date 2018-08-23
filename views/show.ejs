@@ -1,0 +1,41 @@
+<% include ./partials/header %>
+<div class="contentStart">
+  <div class="ui main text container">
+    <div class="ui huge header"><%= foundBlog.title %></div>
+    <!-- <div class="ui top attached">
+      <div class="item">
+        <img class="ui centered rounded image" src="<%= foundBlog.image %>" style="width:70%">
+        <div class="content">
+          <span><%= foundBlog.created.toDateString() %></span>
+        </div>
+        <div class="description">
+          <p><%- foundBlog.body %></p>
+        </div>
+        <a class="ui secondary button"href="/blogs/<%= foundBlog._id %>/edit">Edit</a>
+        <form id="delete" action="/blogs/<%= foundBlog._id %>?_method=DELETE" method="POST">
+          <button class="ui red button">Delete</button>
+        </form>
+      </div>
+    </div> -->
+    <div class="ui fluid card">
+  <div class="image">
+    <img src="<%= foundBlog.image %>">
+  </div>
+  <div class="content">
+    <a class="header"><%= foundBlog.title %></a>
+    <div class="meta">
+      <span class="date"><%= foundBlog.created.toDateString() %></span>
+    </div>
+    <div class="description">
+    <p><%- foundBlog.body %></p>
+    </div>
+  </div>
+  <a class="ui secondary button" href="/blogs/<%= foundBlog._id %>/edit">Edit</a>
+  <form id="delete" action="/blogs/<%= foundBlog._id %>?_method=DELETE" method="POST">
+    <button class="ui fluid red button">Delete</button>
+  </form>
+  </div>
+  </div>
+</div>
+
+<% include ./partials/footer %>

@@ -1,0 +1,16 @@
+i.icon{
+  font-size: 2em;
+}
+
+body{
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+
+.contentStart{
+  margin-top:7%;
+}
+
+#delete{
+  display: inline;
+}

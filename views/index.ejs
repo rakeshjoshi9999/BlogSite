@@ -1,0 +1,31 @@
+<% include ./partials/header %>
+
+<div class="ui main text container">
+  <div class="ui huge header black message">
+  <i class="align justify icon"></i>Restful Blog
+</div>
+    <div class="ui top attached segment">
+      <div class="ui divided items">
+        <% blogs.forEach(function(blog){%>
+        <div class="item">
+          <a class="ui medium bordered image">
+           <img src="<%= blog.image %>">
+          </a>
+          <div class="middle aligned content">
+            <a class="header" href="/blogs/<%=blog._id%>"><%= blog.title %></a>
+            <div class="description">
+              <p><%- blog.body.substring(0,100) %>...</p>
+            </div>
+            <div class="extra">
+              <a class="ui floated basic violet button" href="/blogs/<%=blog._id%>">
+                Read More <i class="right chevron icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+  </div>
+</div>
+
+<% include ./partials/footer %>
